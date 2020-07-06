@@ -1,0 +1,237 @@
+%%
+%% Este es un archivo .tex que debe ser compilado con pdflatex
+%% Para mas informacion a cerca de Latex:
+%% https://www.latex-project.org/
+%% Tutorial en español:
+%% http://metodos.fam.cie.uva.es/~latex/
+
+
+
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{soul}
+
+\mode<presentation>{
+  \usetheme{Madrid} %default,boxes,Bergen,Boadilla,Madrid,AnnArbor,CambridgeUS,Pittsburgh,Rochester,Antibes,JuanLesPins,Berkeley,PaloAlto,Goettingen,Marburg,Hannover,Berlin,Ilmenau,Dresden,Darmstadt,Frankfurt,Singapore,Szeged,Copenhagen,Luebeck,Malmoe,Warsaw
+%%\setbeamercovered{transparent}
+}
+\setbeamercolor{postit}{bg=yellow!50!white}
+
+\title{\textrm{\LaTeX}}
+\author{Martin Marchetti Fabre}
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+\begin{frame}%[Opciones]
+%%  \begin{block}{Contenido}
+  \frametitle{Contenido}
+  \begin{itemize}
+    \item<2-> ¿Qué es \textrm{\LaTeX}?
+    \item<3-> ¿Por qué debería usarlo?
+    \item<4-> ¿Qué necesito para usarlo?
+    \item<5-> \only<5>{¿Esto con que se come?}\only<6->{¿\st{Esto con que se come?} ¿Cómo lo uso?}
+    \item<7> Manos al código
+    \end{itemize}
+%%  \end{block}
+\end{frame}
+
+\begin{frame}[c]
+  \frametitle{¿Qué es \textrm{\LaTeX}?}
+
+  \begin{block}{}
+    Es un sistema de composición de textos, orientado a la creación de documentos escritos que presenten una alta calidad tipográfica.
+  \end{block}
+  \onslide<3->{  \hspace{4cm}
+    \begin{beamercolorbox}[wd={4cm},sep=1mm,center,rounded=true,shadow=true]{postit}
+      \st{``lo que ves es lo que obtienes''}
+    \end{beamercolorbox}
+  }
+
+  \onslide<4->{  \hspace{4cm}
+    \begin{beamercolorbox}[wd={4cm},sep=1mm,center,rounded=true,shadow=true]{postit}
+      ``lo que ves es lo que quieres decir''
+    \end{beamercolorbox}
+  }
+
+\end{frame}
+
+
+\begin{frame}%[Opciones]
+  \frametitle{¿Por qué debería usarlo?}
+  \pause
+  \begin{block}{}
+    Los documentos generados con \textrm{\LaTeX{}} tienen calidad \textit{profesional}. Esto se puede observar en documentos que contengan formulas y ecuaciones. Pero cualquier tipo de documento puede aprovechar la calidad de imprenta de \textrm{\LaTeX{}}
+  \end{block}\pause
+  \begin{block}{}
+    \textrm{\LaTeX{}} permite separar el contenido y el formato del documento. El escritor se concentra en el \textit{``qué''} y \textrm{\LaTeX{}} se encarga del \textit{``cómo''}. Muchas tareas son generadas de forma automatica: \textbf{numerar capítulos y figuras, incluir y organizar la bibliografía adecuada, mantener índices y referencias cruzadas}
+  \end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{¿Qué necesito para usarlo?}
+  \begin{block}{Las 3 partes de \textrm{\LaTeX{}}}
+    \begin{itemize}
+    \item<2-> Motor de \textrm{\LaTeX{}}
+    \item<3-> Editor de textos
+    \item<4-> Visor de documentos
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{¿Qué necesito para usarlo en Windows?}
+  \begin{block}{Motor de \textrm{\LaTeX{}}}
+    \begin{itemize}
+    \item MiKTeX
+    \end{itemize}
+  \end{block}
+  \begin{block}{Editor de textos}
+    \begin{itemize}
+    \item Sublime Text
+    \item TexStudio
+    \item Lyx
+    \item TeXnicCenter
+    \end{itemize}
+  \end{block}
+  \begin{block}{Visor de documentos}
+    \begin{itemize}
+    \item Adobe Reader
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{¿Qué necesito para usarlo en Linux?}
+  \begin{block}{Motor de \textrm{\LaTeX{}}}
+    \begin{itemize}
+    \item TexLive
+    \end{itemize}
+  \end{block}
+  \begin{block}{Editor de textos}
+    \begin{itemize}
+    \item Sublime Text
+    \item TexStudio
+    \item Lyx
+    \item Emacs
+    \end{itemize}
+  \end{block}
+  \begin{block}{Visor de documentos}
+    \begin{itemize}
+    \item Evince
+    \item Okular
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{¿Qué necesito para usarlo en Mac OS X?}
+  \begin{block}{MacTex}
+    MacTex es una distribución que incluye todos los componentes necesarios para trabajar con \textrm{\LaTeX{}}
+  \end{block}
+  \begin{block}{Motor de \textrm{\LaTeX{}}}
+    \begin{itemize}
+    \item MacTex
+    \end{itemize}
+  \end{block}
+  \begin{block}{Editor de textos}
+    \begin{itemize}
+    \item TexShop
+    \item Lyx
+    \end{itemize}
+  \end{block}
+  \begin{block}{Visor de documentos}
+    \begin{itemize}
+    \item TexShop
+    \item Preview
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{¿Cómo lo uso?}\pause
+  \begin{block}{Editar}
+    El primer paso consiste en crear un archivo \texttt{.tex} que contiene el código describiendo la estructura y el contenido del documento.
+  \end{block}\pause
+  \begin{block}{Compilar}
+    Despues, hay que convertir el archivo \texttt{.tex} en un documento con formato \texttt{.pdf} que se puede imprimir y ver en pantalla.
+  \end{block}\pause
+  \begin{block}{Visualizar}
+    Una vez compilado el documento, y si no hubieron \textbf{errores}, puedes visualizarlo para ver si todo está correcto.
+  \end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{Manos al código}
+  \framesubtitle{Estructura general}\pause
+  \begin{block}{Preambulo}
+    Declaraciones de carácter GLOBAL que afectan a la totalidad del documento.
+    \begin{description}
+    \item[\texttt{\textbackslash documentclass[opciones]\{tipo\_de\_documento\}}]
+
+      Esta linea es \textbf{OBLIGATORIA}, ya que define el tipo de documento o clase que vamos a escribir.
+
+    \item[\texttt{\textbackslash usepackage[opciones]\{paquete\}}]
+
+      Carga paquetes de utilidades (para incluir graficos, tesxto en colores, hipervinculos, etc...)
+    \end{description}
+  \end{block}\pause
+  \begin{block}{Cuerpo}
+    Todo lo comprendido entre \texttt{\textbackslash begin\{document\}} y \texttt{\textbackslash end\{document\}}, que es el documento propiamente dicho.
+  \end{block}\pause
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{Manos al código}
+  \framesubtitle{Clase \texttt{article}}
+  \begin{block}{}
+    \texttt{\textbackslash documentclass[a4,11pt]\{article\}\\
+      \textbackslash usepackage[spanish]\{babel\}\\
+      \bigskip
+      \textbackslash title\{Hola Mundo!\}\\
+      \textbackslash author\{Martin\}\\
+      \bigskip
+      \textbackslash begin\{document\}\\
+      \textbackslash maketitle\\
+      \bigskip
+      Mi primer texto en latex.\\
+      \bigskip
+      \textbackslash end\{document\}
+    }
+\end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{Manos al código}
+  \framesubtitle{Clase \texttt{beamer}}
+  \begin{block}{}
+    \texttt{\textbackslash documentclass[12pt]\{beamer\}\\
+      \textbackslash usepackage[spanish]\{babel\}\\
+      \bigskip
+      \textbackslash title\{Hola Mundo!\}\\
+      \textbackslash author\{Martin\}\\
+      \bigskip
+      \textbackslash begin\{document\}\\
+      \textbackslash frame\{\textbackslash titlepage\}\\
+      \bigskip
+      \textbackslash begin\{frame\}\\
+      Mi primera presentación con Beamer.\\
+      \textbackslash end\{frame\}\\
+      \bigskip
+      \textbackslash end\{document\}
+    }
+\end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{Manos al código}
+  \framesubtitle{Repositorio en GitHub}
+  \begin{block}{Todo el código lo podemos encontrar en...}
+    \url{http://www.latex-project.org/}
+  \end{block}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,311 @@
+%%
+%% Este es un archivo .tex que debe ser compilado con pdflatex
+%% Para mas informacion a cerca de Latex:
+%% https://www.latex-project.org/
+%% Tutorial en español:
+%% http://metodos.fam.cie.uva.es/~latex/
+
+
+
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+
+\mode<presentation>{
+  \usetheme{Madrid} %default,boxes,Bergen,Boadilla,Madrid,AnnArbor,CambridgeUS,Pittsburgh,Rochester,Antibes,JuanLesPins,Berkeley,PaloAlto,Goettingen,Marburg,Hannover,Berlin,Ilmenau,Dresden,Darmstadt,Frankfurt,Singapore,Szeged,Copenhagen,Luebeck,Malmoe,Warsaw
+  \setbeamercovered{transparent}
+}
+
+\title{Las herramientas del Software libre}
+\author{Martin Marchetti Fabre}
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+\begin{frame}%[Opciones]
+%%  \begin{block}{Contenido}
+  \frametitle{Contenido}
+  \begin{itemize}
+    \item<2-> Sobre mí.
+      \begin{itemize}
+      \item<3-> Trayectoria laboral.
+      \item<4-> Desempeño laboral actual.
+      \end{itemize}
+    \item<5-> Software libre.    
+      \begin{itemize}
+      \item<6-> Las 4 libertades.             
+      \item<7-> Licencias y \textit{copyleft}.
+      \item<8-> Conclusiones.
+      \item<9-> Herramientas.
+      \end{itemize}
+    \end{itemize}
+%%  \end{block}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{Sobre mí}
+  \begin{itemize}
+  \item Nací en Villa del Rosario. 
+  \item Soy Ingeniero Electrónico, egresado de la UTN-FRC.
+  \item Trabajo como Ingeniero Senior en INPHI, en el diseño de hardware de sistemas de procesamiento para comunicaciones digitales.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}%[Opciones]
+  \frametitle{Sobre mi trabajo}
+  \begin{center}
+    \includegraphics[height=3.5cm]{inphi.jpg}
+    \includegraphics[height=3.5cm]{clariphy.jpeg}
+  \end{center}
+\end{frame}
+
+\begin{frame}%[Opciones]
+  \frametitle{Sobre mi trabajo}
+  \begin{itemize}
+  \item Diseño, modelado, implementación y verificación de algoritmos de DSP para transceptores ópticos coherentes de bajo consumo.
+  \item Reducción de consumo de potencia del diseño utilizando optimizaciones algorítmicas y técnicas de implementación digital.
+  \item Diseño y ejecución de verificación a nivel de algoritmo, RTL y celdas de implementación.
+  \item Experiencia en diseño HDL con aritmetica de punto fijo.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}%[Opciones]
+%%  \begin{block}{Contenido}
+  \frametitle{Contenido}
+  \begin{itemize}
+    \item<0> Sobre mí.
+      \begin{itemize}
+      \item<0> Trayectoria laboral.
+      \item<0> Desempeño laboral actual.
+      \end{itemize}
+    \item<1> Software libre.    
+      \begin{itemize}
+      \item<1> Las 4 libertades.
+      \item<1> Licencias y \textit{copyleft}.
+      \item<1> Conclusiones.
+      \item<1> Herramientas.
+      \end{itemize}
+    \end{itemize}
+%%  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Software libre}
+  \begin{itemize}
+  \item \texttt{«Software libre»} es el software que respeta la libertad de los usuarios y la
+    comunidad.
+  \item Los usuarios tienen la libertad de {\bfseries ejecutar, copiar, distribuir, estudiar,
+    modificar y mejorar el software.}
+  \item El \texttt{«software libre»} es una cuestión de libertad, no de precio.
+  \item Con estas libertades, los usuarios controlan el programa y lo que este hace.
+  \item Cuando los usuarios no controlan el programa, decimos que dicho programa \texttt{«no es
+    libre»}, o que es \texttt{«privativo»}.
+  \item Un programa que no es libre controla a los usuarios, y el programador controla el programa.
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Software libre}
+  \framesubtitle{Las 4 libertades escenciales}
+  \onslide<1,6>{\begin{block}{\small Libertad 0}
+    \footnotesize La libertad de ejecutar el programa como se desee, con cualquier propósito.
+  \end{block}}
+  \onslide<2,5->{\begin{block}{\small Libertad 1}
+      \footnotesize La libertad de estudiar cómo funciona el programa, y cambiarlo para que haga lo que usted quiera.
+      \only<5>{\color{red}Se necesita acceso al código fuente.}
+      \only<6>{\color{black}Se necesita acceso al código fuente.}
+  \end{block}}
+  \onslide<3,6>{\begin{block}{\small Libertad 2}
+    \footnotesize La libertad de redistribuir copias para ayudar a otros.
+  \end{block}}
+  \onslide<4->{\begin{block}{\small Libertad 3}
+    \footnotesize La libertad de distribuir copias de sus versiones modificadas a terceros.
+    Esto le permite ofrecer a toda la comunidad la oportunidad de beneficiarse de las modificaciones.
+    \only<5>{\color{red}Se necesita acceso al código fuente.}
+    \only<6>{\color{black}Se necesita acceso al código fuente.}
+  \end{block}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Licencias y \textit{copyleft}}
+  \begin{itemize}
+  \item Se pueden establecer reglas sobre la manera de compartir y distribuir software libre, siempre
+    que no entren en conflicto con las libertades principales.
+  \item La manera más simple de hacer que un programa sea software libre consiste en ponerlo
+    en el dominio público, sin copyright.
+  \item El \textit{copyleft} es un método general para liberar un programa u otro tipo de trabajo,
+    que requiere que todas las versiones modificadas y extendidas sean también libres.
+  \item Existen diversos tipos de licencias \textit{copyleft}, como Licencia Pública General de GNU,
+    entre muchas otras.
+    
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Licencias y \textit{copyleft}}
+  \begin{center}
+    \only<1>{\includegraphics[height=7cm]{category.es.pdf}}
+    \only<2>{\includegraphics[height=7cm]{free.high.category.es.pdf}}
+    \only<3>{\includegraphics[height=7cm]{priv.high.category.es.pdf}}
+    \only<4>{\includegraphics[height=7cm]{open.high.category.es.pdf}}
+    \only<5>{\includegraphics[height=7cm]{public.high.category.es.pdf}}
+    \only<6>{\includegraphics[height=7cm]{laxo.high.category.es.pdf}}
+    \only<7>{\includegraphics[height=7cm]{copyleft.high.category.es.pdf}}
+    \only<8>{\includegraphics[height=7cm]{gpl.high.category.es.pdf}}
+    \only<10>{\includegraphics[height=7cm]{share.high.category.es.pdf}}
+    \only<9>{\includegraphics[height=7cm]{gratis.high.category.es.pdf}}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusiones}
+  \onslide<1->{\begin{block}{\small SaaSS}
+      \scriptsize Debemos evitar los «Servicios sustitutivos del software», que significa que un
+      servidor ajeno realiza las tareas informáticas del usuario.
+  \end{block}}
+  \onslide<2->{\begin{block}{\small Injusticias primarias y Secundarias}
+      \scriptsize Cuando usamos software privativo nos perjudicamos a nosotros mismos, pero ademas
+      perjudicamos a los demas de forma indirecta, ya sea no compartiendo software o forzando a
+      los demas a usar determinado software. 
+  \end{block}}
+  \onslide<3->{\begin{block}{\small Estado}
+      \scriptsize Los entes públicos existen para los ciudadanos, no para sí mismos.
+      Tienen el deber de conservar el control absoluto sobre las tareas informaticas a fin de
+      garantizar su correcta ejecución en beneficio de los ciudadanos. 
+  \end{block}}
+  \onslide<4>{\begin{block}{\small Educación}
+      \scriptsize Las escuelas influyen sobre el futuro de la sociedad a través de lo que enseñan.
+      Para que esta influencia sea positiva, deben enseñar exclusivamente software libre.
+      Enseñar el uso de un programa privativo equivale a imponer la dependencia,
+      que es lo contrario de la misión educativa.
+  \end{block}}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusiones}
+  \begin{block}{}
+    Todos merecemos tener el control de nuestra propia actividad informática.
+  \end{block}
+  \begin{block}{¿Cómo podemos conseguirlo?}
+    \begin{itemize}
+    \item Rechazando el software que no es libre en los ordenadores que nos pertenecen o que usamos
+      regularmente, y rechazando el SaaSS.
+    \item Desarrollando software libre
+    \item Rehusando desarrollar o promover software privativo o el SaaSS.
+    \item Difundiendo estas ideas.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Herramientas}
+  \begin{columns}
+    \begin{column}{5cm}
+      %\vspace*{1cm}
+      \only<1-7>{\begin{block}{SO GNU/Linux}
+        \small
+        \begin{itemize}
+        \item<2- |alert@2> Ubuntu
+        \item<3- |alert@3> Debian
+        \item<4- |alert@4> Red Hat
+        \item<5- |alert@5> Mint
+        \item<6- |alert@6> Fedora
+        \item<7- |alert@7> Arch
+        \end{itemize}
+      \end{block}}
+
+      \only<8-11>{\begin{block}{SO GNU/Linux totalmente libres}
+        \small
+        \begin{itemize}
+        \item<9- |alert@9> PureOS
+        \item<10- |alert@10> Trisquel
+        \item<11- |alert@11> Hyperbola
+        \end{itemize}
+      \end{block}}
+      
+      \only<12-19>{\begin{block}{Software para el hogar}
+        \small
+        \begin{itemize}
+        \item<12- |alert@12> Chromiun
+        \item<13- |alert@13> Iceweasel-Mozilla Firefox
+        \item<14- |alert@14> LibreOffice
+        \item<15- |alert@15> Emacs
+        \item<16- |alert@16> \LaTeX
+        \item<17- |alert@17> Gimp
+        \item<18- |alert@18> Inkscape
+        \item<19- |alert@19> VLC
+        \end{itemize}
+      \end{block}}
+
+      \only<20-24>{\begin{block}{Herramientas de programacion}
+        \small
+        \begin{itemize}
+        \item<20- |alert@20> GCC
+        \item<21- |alert@21> Eclipse
+        \item<22- |alert@22> Anjuta
+        \item<23- |alert@23> NetBeans IDE
+        \item<24- |alert@24> Python
+        \end{itemize}
+      \end{block}}
+
+      \only<25-27>{\begin{block}{Herramientas para servidores}
+        \small
+        \begin{itemize}
+        \item<25- |alert@25> Apache HTTP Server
+        \item<26- |alert@26> MySQL-MariaDB
+        \item<27- |alert@27> PHP
+        \end{itemize}
+      \end{block}}
+
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \only<1>{\includegraphics[width=4cm]{Gnulinux.pdf}}
+        \only<2>{\includegraphics[width=4cm]{Logo-ubuntu_no(r)-black_orange-hex.pdf}}
+        \only<3>{\includegraphics[width=3.5cm]{Debian-OpenLogo.pdf}}
+        \only<4>{\includegraphics[width=5.5cm]{red-hat-logo1.jpg}}
+        \only<5>{\includegraphics[width=3.5cm]{Logo_Linux_Mint.png}}
+        \only<6>{\includegraphics[width=5cm]{Fedora_logo_and_wordmark.pdf}}
+        \only<7>{\includegraphics[width=5cm]{archlinux-logo-dark-90dpi.ebdee92a15b3.png}}
+        \only<9>{\includegraphics[width=5cm]{pureos.jpg}}
+        \only<10>{\includegraphics[width=5cm]{Logo-Trisquel.pdf}}
+        \only<11>{\includegraphics[width=5cm]{Hyperbola_GNU+Linux-libre_logo.pdf}}
+        \only<12>{\hspace*{0.7cm}\includegraphics[width=3.5cm]{Chromium_11_Logo.pdf}}
+        \only<13>{\includegraphics[width=3.5cm]{Iceweasel_icon.pdf}}
+        \only<13>{\hspace*{0.4cm}\includegraphics[width=3.5cm]{Firefox_logo,_2019.pdf}}
+        \only<14>{\includegraphics[width=5cm]{LibreOffice_Logo_Flat.pdf}}
+        \only<15>{\hspace*{0.7cm}\includegraphics[width=4cm]{EmacsIcon.pdf}}
+        \only<16>{\includegraphics[width=5cm]{LaTeX_logo.pdf}}
+        \only<17>{\includegraphics[width=5cm]{The_GIMP_icon_-_gnome.pdf}}
+        \only<18>{\includegraphics[width=5cm]{Inkscape_Logo.pdf}}
+        \only<19>{\includegraphics[width=5cm]{VLC_Icon.pdf}}
+        \only<20>{\includegraphics[width=5cm]{GNU_Compiler_Collection_logo.pdf}}
+        \only<21>{\includegraphics[width=5cm]{Eclipse-Luna-Logo.pdf}}
+        \only<22>{\includegraphics[width=5cm]{Anjuta.pdf}}
+        \only<23>{\includegraphics[width=5cm]{Apache_NetBeans_Logo.pdf}}
+        \only<24>{\includegraphics[width=5cm]{Python-logo-notext.pdf}}
+        \only<25>{\includegraphics[width=5cm]{Apache_HTTP_server_logo_(2016).png}}
+        \only<26>{\includegraphics[width=3.5cm]{mysqloptimizar1.png}}
+        \only<26>{\includegraphics[width=3.5cm]{MariaDB_Logo.png}}
+        \only<27>{\includegraphics[width=5cm]{PHP-logo.pdf}}
+      \end{center}
+    \end{column}
+  \end{columns}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fuentes}
+  \url{https://www.gnu.org/philosophy/free-sw.es.html}
+  \url{https://www.gnu.org/philosophy/free-software-even-more-important.html}
+  \url{https://es.wikipedia.org/wiki/GNU/Linux#Distribuciones}
+  
+\end{frame}
+
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[a4,11pt]{article}
+%\usepackage[latin1]{inputenc}
+%esto es un comentario y no se imprime ni se compila
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+%\renewcommand{\shorthandsspanish}{}
+
+\usepackage{graphicx}
+
+\title{Documento Fuente \LaTeX{}}
+\author{Yo}
+
+
+\begin{document}
+\maketitle
+%Solo con la siguiente linea creamos todo el índice
+\tableofcontents
+
+\begin{abstract}
+  Ejmplo de documento \LaTeX{} de la clase {\ttfamily article} con una estructura reducida. Ésta incluye secciones, subsecciones y una referencia cruzada.
+\end{abstract}
+
+\section{Primera sección} \label{primera}
+Una primera sección con una fórmula y una lista.
+
+\subsection{Fórmula}
+Una fórmula usando el entorno \texttt{equation}:
+
+\begin{equation}
+  \sum_{n=1}^{\infty}       \frac{1}{n^{2}} = \frac{\pi^{2} }{6}
+  \label{sumatoria}
+\end{equation}
+
+Una ecuación en la misma linea usando el simbolo \texttt{\$}: $\frac{\partial f}{\partial x} =\frac{\partial f}{\partial y}$, a diferencia de la equación \ref{sumatoria}, ésta no se puede referenciar.
+Para generar ecuaciones se puede usar la web: https://latex.codecogs.com/legacy/eqneditor/editor.php
+\subsection{Listas}
+Una lista de ítems señalados con una marca:
+
+\begin{itemize}
+\item Primer ítem
+\item Segundo ítem
+\item Tercer ítem
+\end{itemize}
+
+\section{Segunda sección}
+
+Ésta sección complementa a la sección \ref{primera} incluyendo ejemplos de tablas (Ver tabla \ref{tab:importaciones}) y figuras (Ver figura \ref{fig:gnutux}) escritas en \LaTeX.
+
+\subsection{Tabla}
+\begin{table}[h]
+  \begin{center}
+    \begin{tabular}{ccc}
+      Pais   &Carne&Verduras\\ \hline
+      España &1390 &980     \\
+      Francia&1504 &3020    \\
+      Italia &2010 &1040    \\
+    \end{tabular}
+  \end{center}
+  \caption{Importaciones (en millones de €) de carne y verduras}\label{tab:importaciones}
+\end{table}
+
+
+\subsection{Figuras}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=10cm]{Logo-ubuntu_no(r)-black_orange-hex.pdf}
+  \end{center}
+  \caption{Logo de Ubuntu}\label{fig:ubuntu}
+\end{figure} 
+
+
+\subsection{Figuras}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=10cm]{Gnulinux.pdf}
+  \end{center}
+  \caption{Figura de Tux y GNU}\label{fig:gnutux}
+\end{figure} 
+
+\end{document}
